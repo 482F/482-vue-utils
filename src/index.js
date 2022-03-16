@@ -1,3 +1,7 @@
-import ResizerComponent from 'components/resizer/resizer.vue'
+import Resizer from './components/resizer/resizer.vue'
+import Plugins from './plugins.js'
 
-export const Resizer = ResizerComponent
+export default {
+  Resizer,
+  Plugins,
+}
