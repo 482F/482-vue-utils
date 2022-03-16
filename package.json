@@ -2,6 +2,7 @@
   "name": "482-vue-utils",
   "version": "0.1.0",
   "private": true,
+  "main": "src/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -10,16 +11,12 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@storybook/vue": "^6.4.19",
     "core-js": "^3.6.5",
-    "css-loader": "^5.2.7",
     "lodash": "^4.17.21",
-    "node-sass": "^6.0.1",
-    "sass-loader": "^10.2.0",
-    "style-loader": "^2.0.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@storybook/vue": "^6.4.19",
     "@babel/core": "^7.17.8",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
@@ -27,11 +24,15 @@
     "@vue/cli-plugin-babel": "~4.5.13",
     "@vue/cli-plugin-eslint": "~4.5.13",
     "@vue/cli-service": "~4.5.13",
+    "css-loader": "^5.2.7",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-loader": "^15.9.8",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.2.0",
+    "style-loader": "^2.0.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
