@@ -50,6 +50,10 @@ export default {
       type: Number,
       default: 8,
     },
+    intervalMs: {
+      type: Number,
+      default: 10,
+    },
   },
   methods: {
     resizeStart(e) {
@@ -73,7 +77,7 @@ export default {
         slotElement.style[size] = newSize + 'px'
         this.$emit('input', newSize)
         return newSize
-      }, 10)
+      }, this.intervalMs)
       const resizeEnd = (e) => {
         document.removeEventListener('mousemove', resizing)
         document.removeEventListener('mouseup', resizeEnd)

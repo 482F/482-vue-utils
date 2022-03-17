@@ -60,4 +60,5 @@ Primary.args = {
   maxSize: 800,
   minSize: 100,
   handleSize: 8,
+  intervalMs: 10,
 }
