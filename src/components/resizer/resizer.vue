@@ -73,7 +73,7 @@ export default {
         slotElement.style[size] = newSize + 'px'
         this.$emit('input', newSize)
         return newSize
-      }, 50)
+      }, 10)
       const resizeEnd = (e) => {
         document.removeEventListener('mousemove', resizing)
         document.removeEventListener('mouseup', resizeEnd)

@@ -17,7 +17,7 @@ const Template = (args, { argTypes }) => ({
   template: `
     <div>
       <resizer v-bind="$props">
-        <div style="background-color: lightgray">abcdef</div>
+        <div style="background-color: lightgray; width: 400px; height: 400px;">abcdef</div>
       </resizer>
     </div>
   `,
@@ -26,7 +26,7 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({})
 Primary.args = {
   direction: 'right',
-  maxSize: 300,
+  maxSize: 800,
   minSize: 100,
   handleSize: 8,
 }
