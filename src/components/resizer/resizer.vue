@@ -53,6 +53,7 @@ export default {
   },
   methods: {
     resizeStart(e) {
+      e.preventDefault()
       const slotElement =
         this.$slots.default?.[0]?.elm ?? this.$slots.default?.[0]
       const sign = ['right', 'bottom'].includes(this.direction) ? 1 : -1
