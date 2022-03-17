@@ -109,7 +109,7 @@ export default {
       margin-bottom: calc(-1 * var(--size));
     }
     &.bottom {
-      margin-right: calc(-1 * var(--size));
+      margin-top: calc(-1 * var(--size));
     }
     &.left,
     &.right {
