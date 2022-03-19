@@ -1,4 +1,4 @@
-export const plugins = {
+export default {
   install(Vue) {
     Vue.prototype.$console = console
   },
