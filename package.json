@@ -12,9 +12,11 @@
   "dependencies": {
     "@storybook/vue": "^6.4.19",
     "core-js": "^3.6.5",
+    "css-loader": "^5.2.7",
     "lodash": "^4.17.21",
     "node-sass": "^6.0.1",
     "sass-loader": "^10.2.0",
+    "style-loader": "^2.0.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
