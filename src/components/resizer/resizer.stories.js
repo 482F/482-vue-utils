@@ -13,14 +13,45 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Resizer },
+  components: {
+    Resizer,
+  },
+  data() {
+    return {
+      valueByInput: 0,
+      valueByChange: 0,
+    }
+  },
   template: `
     <div>
-      <resizer v-bind="$props">
-        <div style="background-color: lightgray; width: 400px; height: 400px;">abcdef</div>
+      <resizer
+        v-bind="$props"
+        @input="onInput"
+        @change="onChange"
+      >
+        <div style="
+          background-color: lightgray;
+          width: 400px;
+          height: 400px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        ">
+          <div>abcdef</div>
+        </div>
       </resizer>
+      <div>value by input: {{valueByInput}}</div>
+      <div>value by change: {{valueByChange}}</div>
     </div>
   `,
+  methods: {
+    onInput(newValue) {
+      this.valueByInput = newValue
+    },
+    onChange(newValue) {
+      this.valueByChange = newValue
+    },
+  },
 })
 
 export const Primary = Template.bind({})
