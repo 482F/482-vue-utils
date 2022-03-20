@@ -61,6 +61,10 @@ export default {
       const slotElement =
         this.$slots.default?.[0]?.elm ?? this.$slots.default?.[0]
       const sign = ['right', 'bottom'].includes(this.direction) ? 1 : -1
+      const classes = [
+        'resizing',
+        ['right', 'left'].includes(this.direction) ? 'ew' : 'ns',
+      ]
       const [clientSize, clientPos, size] = ['right', 'left'].includes(
         this.direction
       )
@@ -83,7 +87,9 @@ export default {
         document.removeEventListener('mouseup', resizeEnd)
         const newSize = resizing(e)
         this.$emit('change', newSize)
+        document.body.classList.remove(...classes)
       }
+      document.body.classList.add(...classes)
       document.addEventListener('mousemove', resizing)
       document.addEventListener('mouseup', resizeEnd)
     },
@@ -125,6 +131,17 @@ export default {
       cursor: ns-resize;
       height: var(--size);
     }
+  }
+}
+</style>
+
+<style lang="scss">
+body.resizing {
+  &.ew {
+    cursor: ew-resize !important;
+  }
+  &.ns {
+    cursor: ns-resize !important;
   }
 }
 </style>
